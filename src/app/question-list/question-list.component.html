@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <li *ngFor="let question of questions">
+      <p>{{question.question}}</p>
+        <div *ngFor="let answer of question.answers">
+          <label for="answer_{{answer.answer}}">
+            <input (click)="setAnswer(answer.score, question.question)" id="answer_{{answer.answer}}" type="radio" value="{{answer.score}}" [(ngModel)]="answer.score" name="{{question.question}}">
+          </label>{{answer.answer}}
+        </div>
+    </li>
+  </ul>
+</div>
+<button (click)="getResult()">Who am I?</button>

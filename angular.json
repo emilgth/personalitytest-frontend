@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "personalitytest-frontend"
+    }
+  },
+  "defaultProject": "personalitytest-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
