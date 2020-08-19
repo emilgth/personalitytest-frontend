@@ -28,7 +28,6 @@ export class QuestionService {
   getResult(answers: Map<string, number>): Observable<string> {
     let answersList = Array.from(answers.values());
     answersList = answersList.filter(answer => answer !== 0);
-    console.log(answersList);
     return this.http.post<string>(this.resultUrl, answersList, this.httpOptions).pipe(
       catchError(this.handleError<string>('getResult')),
     );

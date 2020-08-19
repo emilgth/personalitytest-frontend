@@ -11,3 +11,6 @@
   </ul>
 </div>
 <button (click)="getResult()">Who am I?</button>
+<div *ngIf="result">
+  <p>You are a {{result.result}}</p>
+</div>

@@ -36,7 +36,6 @@ export class QuestionListComponent implements OnInit {
   getResult(): void {
     this.questionService.getResult(this.answers).subscribe(result => {
       this.result = result;
-      console.log(this.result);
     });
   }
 }
